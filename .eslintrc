@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "@nuxtjs",
+    "plugin:vue/recommended"
+  ],
+  
+  "rules": {
+    "vue/html-self-closing": 0
+  }
+}

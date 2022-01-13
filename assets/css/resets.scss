@@ -1,23 +1,28 @@
-
-/* @font-face {
-  font-family: "Roboto Slab";
-  src: local("Roboto Slab"),
-  url('@/assets/fonts/RobotoSlab.ttf');
+@font-face {
+  font-family: "Lora";
+  src: local("Lora"),
+  url('@/assets/fonts/Lora-VariableFont_wght.ttf');
 }
 @font-face {
-  font-family: "Indie Flower";
-  src: local("Indie Flower"),
-  url('@/assets/fonts/IndieFlower.ttf');
-} */
-
+  font-family: "MADEMirage";
+  src: local("MADEMirage"),
+  url('@/assets/fonts/MADE Mirage Regular.otf');
+}
+@font-face {
+  font-family: "Keukenhof";
+  src: local("Keukenhof"),
+  url('@/assets/fonts/Keukenhof.ttf');
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
 body{
   margin: 0;
   overflow-x: hidden;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lora', serif;
+  background-color: $color1;
 }
 html{
+  background: $color1;
   scroll-behavior: smooth;
 }

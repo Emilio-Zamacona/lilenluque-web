@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faExternalLinkAlt)
-library.add(faGithub)
+library.add(faChevronRight)
+library.add(faTimes)
 
-Vue.component('fa', FontAwesomeIcon)
+Vue.component('FaIcon', FontAwesomeIcon)
