@@ -1,6 +1,5 @@
 <template>
   <section class="about">
-    <h1>  QUE ONDA CON ESTO POR QUEEEEEEEEEEEEEEEE</h1>
   </section>
 </template>
 

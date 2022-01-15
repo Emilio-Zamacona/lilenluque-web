@@ -514,6 +514,17 @@
 
 <script>
 export default {
+  data () {
+    return {
+
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', (e) => { console.log(e) })
+  },
+  destroyed () {
+    window.removeEventListener('scroll', (e) => { console.log(e) })
+  }
 
 }
 </script>
@@ -547,7 +558,6 @@ export default {
 
 .--name{
   animation: name 2s;
-  transform-box: fill-box;
 }
 .--arte{
   animation: name 2s;

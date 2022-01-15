@@ -1,7 +1,7 @@
 <template>
   <section class="--fixed">
     <transition name="appear">
-      <FaIcon v-if="!navOpen" class="open-close open-close--open" :icon="['fas', 'chevron-right']" @click="navOpen=!navOpen"></FaIcon>
+      <FaIcon v-if="!navOpen" class="open-close open-close--open" :icon="['fas', 'bars']" @click="navOpen=!navOpen"></FaIcon>
     </transition>
 
     <transition name="slide-left">
@@ -22,19 +22,19 @@ export default {
       navOpen: false,
       navItems: [
         {
-          name: 'Home',
+          name: 'Inicio',
           href: ''
         },
         {
-          name: 'Contact',
+          name: 'Acerca de',
           href: ''
         },
         {
-          name: 'About',
+          name: 'Galería',
           href: ''
         },
         {
-          name: 'Works',
+          name: 'Contacto',
           href: ''
         }
 
@@ -55,15 +55,16 @@ export default {
 .open-close{
   position: absolute;
   top: 50vh;
-  left: 50%;
   color: $color3;
+  font-size: 2rem;
+  filter: drop-shadow(0px 0px 1px #4444dd);
   &--open{
     color: $color3;
-    font-size: 3rem;
+    left: 20%;
   }
   &--close{
     color: $color1;
-    font-size: 3rem;
+    left: 70%;
   }
 }
 .nav-bar{
@@ -72,6 +73,8 @@ export default {
   &__items{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
     background: $color4;
     height: 100vh;
     &__close{
@@ -80,6 +83,7 @@ export default {
     &__item{
       text-decoration: none;
       color: $color1;
+      margin: 0 0 0 1rem;
       &:active{
         color: $color3;
       }

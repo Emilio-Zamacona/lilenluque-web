@@ -15,7 +15,13 @@ export default {
   name: 'IndexPage',
   data () {
     return {}
-  }
+  },
+  mounted () {
+  },
+  destroyed () {
+
+  },
+  methods: {}
 
 }
 </script>
