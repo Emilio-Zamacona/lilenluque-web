@@ -9,6 +9,7 @@
       viewBox="0 0 627.97 646.32"
       style="enable-background:new 0 0 627.97 646.32;"
       xml:space="preserve"
+      class="hero__logo"
     >
       <g id="Capa_2">
         <g>
@@ -30,7 +31,7 @@
             d="M469.69,347.44c3.01,6.15,4.61,33.92,1.19,38.18c-2.6,3.23-7.82-7.49-8.86-18.32
 			C460.66,353.13,466.71,341.33,469.69,347.44z"
           />
-          <text transform="matrix(1 0 0 1 246.3857 414.6053)" class="st13 st9 st14">• </text>
+          <text transform="matrix(1 0 0 1 246.3857 414.6053)" class="st13 st9 st14 --arte">• </text>
           <g class="--spot">
             <g>
               <g>
@@ -509,6 +510,7 @@
         </g>
       </g>
     </svg>
+    <div class="hero__end"></div>
   </section>
 </template>
 
@@ -520,10 +522,10 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', (e) => { console.log(e) })
+
   },
   destroyed () {
-    window.removeEventListener('scroll', (e) => { console.log(e) })
+
   }
 
 }
@@ -535,6 +537,7 @@ export default {
   justify-content: center;
   width: 100vw;
   height: auto;
+  position: relative;
 }
 /*----------------------------svg stuff----------------------------*/
 .st0{fill:#6D0B51;}

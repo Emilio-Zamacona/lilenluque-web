@@ -3,7 +3,9 @@
     <div class="horizontal-scroll-wrapper">
       <div class="main">
         <HeroMain />
-        <About />
+        <AboutMain />
+        <GalleryMain />
+        <ContactMain />
       </div>
     </div>
     <NavBar />
@@ -32,6 +34,8 @@ export default {
   min-width: 100vw;
   background:$color1;
   display: flex;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
 }
 .horizontal-scroll-wrapper {
   background: $color1;
@@ -45,10 +49,6 @@ export default {
   scrollbar-width: none;  /* Firefox */
   &::-webkit-scrollbar{
     display: none;
-  }
-  div{
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
   }
 }
 

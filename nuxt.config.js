@@ -42,6 +42,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['@nuxtjs/eslint-module'],
     ['nuxt-fontawesome', {
       component: 'fa', //customize component name
       imports: [{
@@ -71,5 +72,8 @@ export default {
   build: {
   },
   ssr: true,
-  target: 'static'
+  target: 'static',
+  eslint: {
+    fix: true
+  }
 }

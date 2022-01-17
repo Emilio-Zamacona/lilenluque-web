@@ -54,17 +54,16 @@ export default {
 }
 .open-close{
   position: absolute;
-  top: 50vh;
+  top: 20px;
   color: $color3;
   font-size: 2rem;
-  filter: drop-shadow(0px 0px 1px #4444dd);
+  left: 20px;
+  cursor: pointer;
   &--open{
     color: $color3;
-    left: 20%;
   }
   &--close{
     color: $color1;
-    left: 70%;
   }
 }
 .nav-bar{
@@ -84,6 +83,7 @@ export default {
       text-decoration: none;
       color: $color1;
       margin: 0 0 0 1rem;
+      cursor: pointer;
       &:active{
         color: $color3;
       }
