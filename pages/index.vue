@@ -1,14 +1,14 @@
 <template>
   <section>
-    <div class="horizontal-scroll-wrapper">
-      <div class="main">
-        <HeroMain />
-        <AboutMain />
-        <GalleryMain />
-        <ContactMain />
-      </div>
-    </div>
+    <HeroMain />
     <NavBar />
+    <transition-group name="appearLeft" mode="in-out">
+      <AboutMain v-if="navChosen == 'about'" key="about" />
+      <WatercolorMain v-if="navChosen == 'watercolor'" key="watercolor" />
+      <DesignMain v-if="navChosen == 'design'" key="design" />
+      <ContactMain v-if="navChosen == 'contact'" key="contact" />
+    </transition-group>
+    <SocialMain />
   </section>
 </template>
 
@@ -16,40 +16,19 @@
 export default {
   name: 'IndexPage',
   data () {
-    return {}
-  },
-  mounted () {
-  },
-  destroyed () {
+    return {
 
+    }
+  },
+  computed: {
+    navChosen () {
+      return this.$store.state.navChosen
+    }
   },
   methods: {}
 
 }
 </script>
 <style lang="scss">
-
-.main{
-  height: 100vh;
-  min-width: 100vw;
-  background:$color1;
-  display: flex;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-}
-.horizontal-scroll-wrapper {
-  background: $color1;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: absolute;
-    -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  &::-webkit-scrollbar{
-    display: none;
-  }
-}
 
 </style>

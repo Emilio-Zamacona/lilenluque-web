@@ -8,7 +8,9 @@
       <div v-if="navOpen" class="nav-bar">
         <div class="nav-bar__items">
           <FaIcon :icon="['fas', 'times']" class="open-close open-close--close" @click="navOpen=!navOpen"></FaIcon>
-          <a v-for="item in navItems" :key="item.name" class="nav-bar__items__item" :href="item.href">{{ item.name }}</a>
+          <a v-for="item in navItems" :key="item.name" class="nav-bar__items__item" @click="navTo(item.navigation)">
+            {{ item.name }}
+          </a>
         </div>
       </div>
     </transition>
@@ -23,22 +25,42 @@ export default {
       navItems: [
         {
           name: 'Inicio',
-          href: ''
+          navigation: ''
         },
         {
-          name: 'Acerca de',
-          href: ''
+          name: 'Bio',
+          navigation: 'about'
         },
         {
-          name: 'Galería',
-          href: ''
+          name: 'Acuarelas',
+          navigation: 'watercolor'
+        },
+        {
+          name: 'Diseño',
+          navigation: 'design'
         },
         {
           name: 'Contacto',
-          href: ''
+          navigation: 'contact'
         }
 
       ]
+    }
+  },
+  mounted () {
+    document.addEventListener('click', this.cancel)
+  },
+  destroyed () {
+    document.removeEventListener('click', this.cancel)
+  },
+  methods: {
+    navTo (to) {
+      this.$store.commit('nav', to)
+    },
+    cancel (e) {
+      if (e.clientX > 180) {
+        this.navOpen = false
+      }
     }
   }
 
@@ -51,6 +73,7 @@ export default {
   top: 0;
   left: 0;
   width: 180px;
+   z-index: 3;
 }
 .open-close{
   position: absolute;
@@ -69,6 +92,7 @@ export default {
 .nav-bar{
   background: $color1;
   width: 180px;
+
   &__items{
     display: flex;
     flex-direction: column;

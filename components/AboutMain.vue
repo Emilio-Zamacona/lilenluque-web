@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section class="about --flex-col --fixed-on-top">
     <h2 class="about__title">
       BIO
     </h2>
@@ -24,15 +24,8 @@ export default {
 
 <style lang="scss" scoped>
 .about{
-  height: 100vh;
-  width: 100vw;
   background: $color4;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-       color: $color1;
+  color: $color1;
   &::before{
     content: "";
     position: absolute;
@@ -53,7 +46,7 @@ export default {
       padding: 2rem;
       line-height: 2.5rem;
       font-size: 1rem;
-      z-index: 2;
+
     }
   }
 

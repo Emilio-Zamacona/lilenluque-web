@@ -1,5 +1,5 @@
 <template>
-  <section class="contact --flex">
+  <section class="contact --flex --fixed-on-top">
     <div class="contact__img --contact"></div>
     <div class="contact__form-container --flex-col">
       <h1 class="contact__form-container__title">
@@ -33,12 +33,6 @@
         </div>
       </form>
     </div>
-    <div class="contact__social --flex">
-      <a class="--instagram" href=""></a>
-      <a class="--whatsapp" href=""></a>
-      <a class="--email" href=""></a>
-      <a class="--contact" href=""></a>
-    </div>
   </section>
 </template>
 
@@ -62,12 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.--instagram{background-image: url(../assets/img/instagram.svg);}
-.--whatsapp{background-image: url(../assets/img/whatsapp.svg);}
-.--email{background-image: url(../assets/img/email.svg);}
-.--red{
-  background: red !important;
-}
+
 .--focused-line{
   &::after{
     content: "";
@@ -84,10 +73,8 @@ export default {
 
 .contact{
   color:$color5;
+  background: #e6e47b;
   letter-spacing: 5px;
-  margin: 3rem;
- /*  width: 100vw; */
-  position: relative;
   &__img{
     background-image: url(../assets/img/contacto.svg);
     background-position: center center;

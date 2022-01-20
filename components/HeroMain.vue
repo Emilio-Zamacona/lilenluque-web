@@ -535,8 +535,7 @@ export default {
 .hero{
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: auto;
+  height: 100vh;
   position: relative;
 }
 /*----------------------------svg stuff----------------------------*/
@@ -573,7 +572,6 @@ export default {
 .--spot{
   animation: appear 3s,grow2 3s infinite;
   transform-box: fill-box;
-
 }
 .--flower{
   transform-box: fill-box;

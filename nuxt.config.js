@@ -3,7 +3,7 @@ export default {
   head: {
     script: [
       {
-        body:true
+        body: true
       }
     ],
     title: 'Lilen Luque',
@@ -23,11 +23,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/css/colors.scss',
-  '@/assets/css/resets.scss',
-  '@/assets/css/helpers.scss',
-  'normalize.css',
-  '@/assets/css/mixins.scss',
-  '@/assets/css/swiper.css'
+    '@/assets/css/resets.scss',
+    '@/assets/css/helpers.scss',
+    'normalize.css',
+    '@/assets/css/mixins.scss',
+    '@/assets/css/swiper.css',
+    '@/assets/css/animations.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -44,25 +45,27 @@ export default {
   buildModules: [
     ['@nuxtjs/eslint-module'],
     ['nuxt-fontawesome', {
-      component: 'fa', //customize component name
+      component: 'fa', // customize component name
       imports: [{
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['fas']
-          },
-          {set: '@fortawesome/free-regular-svg-icons',
-          icons: ['far']
-          },
-          {set: '@fortawesome/free-brands-svg-icons',
-          icons: ['fab']
-          },
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['far']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
       ]
-   }],
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   styleResources: {
     scss: ['./assets/css/*.scss']
