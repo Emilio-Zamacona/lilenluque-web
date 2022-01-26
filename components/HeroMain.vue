@@ -536,7 +536,9 @@ export default {
   display: flex;
   justify-content: center;
   height: 100vh;
-  position: relative;
+  position:fixed;
+  left: 50%;
+  margin-left: -25%;
 }
 /*----------------------------svg stuff----------------------------*/
 .st0{fill:#6D0B51;}

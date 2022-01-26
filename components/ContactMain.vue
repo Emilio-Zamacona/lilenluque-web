@@ -27,7 +27,7 @@
           ></textarea>
         </div>
         <div class="contact__form-container__form__field contact__form-container__form__field--flex-end">
-          <button type="submit" value="Check">
+          <button type="submit" value="Check" class="--button-send" @click="momentaryClass($event,'--button-clicked',1000)">
             ENVIAR
           </button>
         </div>
@@ -73,7 +73,7 @@ export default {
 
 .contact{
   color:$color5;
-  background: #e6e47b;
+  background: $color7;
   letter-spacing: 5px;
   &__img{
     background-image: url(../assets/img/contacto.svg);
@@ -106,18 +106,10 @@ export default {
           background:$color6;
           border: none;
           &:focus{
-            background: lighten($color5,60%);
+            background: lighten($color4,20%);
             outline: none;
             position: relative;
           }
-        }
-        button{
-          width: 100px;
-          height: 40px;
-          border: none;
-          background: $color5;
-          color: $color1;
-          letter-spacing: 2px;
         }
       }
     }

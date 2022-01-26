@@ -3,16 +3,16 @@
     <div class="gallery__watercolor">
       <div
         v-for="pic in gallery"
-        :key="pic.name"
+        :id="pic.description"
+        :key="pic.description"
         class="gallery__watercolor__frame --flex"
-        :class="[pic.full ? '--full':'']"
         @mouseenter="hoverShow(pic)"
         @mouseleave="hoverShow(pic)"
         @click="fullView(pic.name)"
       >
-        <img class="gallery__watercolor__frame__img" :src="require('../assets/img/gallery/'+pic.name)" :alt="pic">
+        <img class="gallery__watercolor__frame__img" :src="require('../assets/img/gallery/'+pic.name)" :alt="pic.description">
         <transition-group name="fade">
-          <div v-if="pic.hover" :key="pic.name" class="gallery__watercolor__frame__description --flex">
+          <div v-if="pic.hover" :key="pic.description" class="gallery__watercolor__frame__description --flex">
             <p>
               {{ pic.description }}
             </p>
@@ -32,8 +32,8 @@
 export default {
   props: {
     gallery: {
-      type: Object,
-      default: () => { return { pic: '' } }
+      type: Array,
+      default: () => ['']
     }
   },
   data () {
@@ -46,7 +46,9 @@ export default {
       return this.fullPic
     }
   },
+
   methods: {
+
     hoverShow (element) {
       element.hover = !element.hover
     },

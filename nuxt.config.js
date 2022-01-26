@@ -35,7 +35,8 @@ export default {
   plugins: [
     '@/plugins/vue-awesome-swiper.js',
     '@/plugins/vue-fontawesome.js',
-    '@/plugins/vue-observe-visibility.js'
+    '@/plugins/vue-observe-visibility.js',
+    '@/plugins/global.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

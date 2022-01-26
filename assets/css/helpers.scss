@@ -10,7 +10,7 @@
     align-items: center;
 }
 .--flex-jus-start{
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 .--flex-align-start{
     align-items: flex-start !important;
@@ -23,3 +23,25 @@
     min-width: 100vw;
     min-height: 100vh;
 }
+.--button-send{
+    border: none;
+    height: 50px;
+    width: 170px;
+    background: $color5;
+    color: $color6;
+    letter-spacing: 2px;
+    transition: .5s;
+    &:hover{
+        transform: scale(.95);
+        
+    }
+}
+.--button-clicked{
+    animation: buttonClicked 1s !important;
+}
+@keyframes buttonClicked {
+    0%{background: $color5;}
+    15%{background: $color4;}
+    85%{background: $color4;}
+    100%{background: $color5;}
+  }

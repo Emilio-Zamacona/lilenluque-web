@@ -3,6 +3,7 @@ export const state = () => ({
   design: {
     chosenArticle: ''
   }
+
 })
 
 export const mutations = {

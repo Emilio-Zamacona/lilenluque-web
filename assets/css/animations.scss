@@ -1,17 +1,28 @@
+
+
+.slideLeft-enter-active{
+  animation: appearLeft .3s;
+}
+.slideLeft-leave-active{
+  animation: appearLeft .3s reverse;
+}
 .appearLeft-enter-active{
-  animation: appearLeft 1s;
+  animation: appearLeft .5s;
 }
 .appearLeft-leave-active{
-  animation: appearLeft 1s reverse;
+  animation: appearLeft .5s reverse;
 }
 .appearRight-enter-active{
-    animation: appearRight 1s;
+    animation: appearRight .5s;
 }
 .appearRight-leave-active{
-  animation: appearRight 1s reverse;
+  animation: appearRight .5s reverse;
 }
 .appearBottom-enter-active{
-    animation: appearBottom 1s ease-out;
+    animation: appearBottom .5s;
+}
+.appearBottom-leave-active{
+  animation: appearBottom .5s reverse;
 }
 .grow-enter-active{
     animation: grow .5s ease-out;
@@ -35,8 +46,8 @@
   100%{transform: translateX(0px); opacity: 1;}
 }
 @keyframes appearBottom {
-  0%{transform: translateY(100%);}
-  100%{transform: translateY(0px);}  
+  0%{transform: translateY(20%); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}  
 }
 @keyframes grow {
   0%{transform: scale(0);}
@@ -47,3 +58,5 @@
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
+
+

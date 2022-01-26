@@ -13,6 +13,11 @@
   src: local("Keukenhof"),
   url('@/assets/fonts/Keukenhof.ttf');
 }
+@font-face {
+  font-family: "Against";
+  src: local("Against"),
+  url('@/assets/fonts/against.ttf');
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -20,9 +25,17 @@ body{
   margin: 0;
   overflow-x: hidden;
   font-family: 'Lora', serif;
-  background-color: $color1;
+
 }
 html{
   background: $color1;
   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+display: none;
+
+}
+body{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

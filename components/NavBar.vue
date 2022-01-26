@@ -29,19 +29,19 @@ export default {
         },
         {
           name: 'Bio',
-          navigation: 'about'
+          navigation: 'AboutMain'
         },
         {
           name: 'Acuarelas',
-          navigation: 'watercolor'
+          navigation: 'WatercolorMain'
         },
         {
           name: 'Diseño',
-          navigation: 'design'
+          navigation: 'DesignMain'
         },
         {
           name: 'Contacto',
-          navigation: 'contact'
+          navigation: 'ContactMain'
         }
 
       ]
@@ -98,7 +98,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    background: $color4;
+    background: $color5;
     height: 100vh;
     &__close{
       width: 100px;
